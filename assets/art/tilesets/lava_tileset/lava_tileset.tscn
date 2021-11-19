@@ -1,0 +1,94 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava5_spritesheet1.png" type="Texture" id=1]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava5_spritesheet2.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava5_spritesheet3.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava5_spritesheet4.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava2_spritesheet1.png" type="Texture" id=5]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava4_spritesheet3.png" type="Texture" id=6]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava4_spritesheet4.png" type="Texture" id=7]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava4_spritesheet2.png" type="Texture" id=8]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava2_spritesheet2.png" type="Texture" id=9]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava4_spritesheet1.png" type="Texture" id=10]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava3_spritesheet3.png" type="Texture" id=11]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava3_spritesheet1.png" type="Texture" id=12]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava2_spritesheet3.png" type="Texture" id=13]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava3_spritesheet4.png" type="Texture" id=14]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava3_spritesheet2.png" type="Texture" id=15]
+[ext_resource path="res://assets/art/tilesets/lava_tileset/lava2_spritesheet4.png" type="Texture" id=16]
+
+[sub_resource type="AnimatedTexture" id=1]
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 5 )
+frame_1/texture = ExtResource( 9 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 13 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 16 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=2]
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 12 )
+frame_1/texture = ExtResource( 15 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 11 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 14 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=3]
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 10 )
+frame_1/texture = ExtResource( 8 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 6 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 7 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=4]
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 1 )
+frame_1/texture = ExtResource( 2 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 3 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 4 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=5]
+frames = 4
+fps = 10.0
+frame_0/texture = ExtResource( 1 )
+frame_1/texture = ExtResource( 2 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 3 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 4 )
+frame_3/delay_sec = 0.0
+
+[node name="lava_tileset" type="Node2D"]
+
+[node name="lava1" type="Sprite" parent="."]
+position = Vector2( 0, 16 )
+texture = SubResource( 1 )
+
+[node name="lava2" type="Sprite" parent="."]
+position = Vector2( 0, 32 )
+texture = SubResource( 2 )
+
+[node name="lava3" type="Sprite" parent="."]
+position = Vector2( 0, 48 )
+texture = SubResource( 3 )
+
+[node name="lava4" type="Sprite" parent="."]
+position = Vector2( 0, 64 )
+texture = SubResource( 4 )
+
+[node name="lava5" type="Sprite" parent="."]
+texture = SubResource( 5 )
