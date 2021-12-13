@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/art/tilesets/hotel_inner/tileset_hotel_inner.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/art/tilesets/hotel_fog/tileset_hotel_fog.tres" type="TileSet" id=2]
+[ext_resource path="res://scripts/hotels/HotelRoom.gd" type="Script" id=3]
+[ext_resource path="res://scripts/hotels/FloorAndWalls.gd" type="Script" id=4]
+
+[node name="HotelRoom" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="FloorAndWalls" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+script = ExtResource( 4 )
+
+[node name="Fog" type="TileMap" parent="FloorAndWalls"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+
+[node name="Tween" type="Tween" parent="FloorAndWalls"]
