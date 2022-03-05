@@ -11,7 +11,7 @@ func _ready() -> void:
         _fog.set_cell(cell.x, cell.y, 0, false, false, false, Vector2(1, 1))
 
     _fog.update_bitmask_region()
-    emit_signal("room_visibility_changed", false)
+    remove_fog()
 
 func remove_fog() -> void:
     _tween_fog(Color.transparent)
