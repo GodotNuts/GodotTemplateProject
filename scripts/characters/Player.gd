@@ -13,9 +13,13 @@ func _physics_process(delta: float) -> void:
     var jumped = CanJump and Input.is_action_just_pressed("ui_select")
     if jumped or _in_air:
         if jumped and not _in_air:
-            _velocity = -Vector2.UP * JumpStrength
-        _body.global_position.y += _velocity.y + GlobalProperties.Gravity * delta
-        if _body.global_position.y >= 0.0:
+            _velocity = Vector2.UP * JumpStrength
+            _in_air = true
+        _velocity.y += GlobalProperties.Gravity * delta
+        _body.position.y += _velocity.y
+        if _body.position.y >= 0.0:
             _in_air = false
-            _body.global_position.y = 0.0
+            _body.position.y = 0.0
             _velocity.y = 0
+
+    move_and_slide(direction * MoveSpeed)
